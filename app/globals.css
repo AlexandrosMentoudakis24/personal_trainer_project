@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --color-statisticsCardBgColor: #1F1F1F;
+}
+
+@theme {
+  --color-secondaryFgColor: #909090;
+
+  --color-primaryBgColor: #0F0F0F;
+  --color-primaryButtonBgColor: #FF2332;
+
+  --color-navigationBarBgColor: #1F1F1F;
+
+  --color-statisticsCardBgColor: #1F1F1F;
+  --color-statisticsCardPrimaryTextColor: #FF2332;
+  --color-statisticsCardSecondaryTextColor: #909090;
+
+  --color-testimonialsCardBgColor: #1F1F1F;
+  --color-testimonialsCardContentTextColor: #FFFFFF;
+  --color-testimonialsCardCreatorTextColor: #909090;
+  --color-testimonialsActiveIndexBgColor: #FF2332;
+  --color-testimonialsInactiveIndexBgColor: #909090;
+
+  --breakpoint-xs: 170px;
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 980px;
+  --breakpoint-lg: 1100px;
+  --breakpoint-2xl: 1300px;
+  --breakpoint-3xl: 1600px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}

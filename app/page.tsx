@@ -2,7 +2,6 @@ import QuestionsAndAnswersContainer from "./components/home_screen/QuestionsAndA
 import QualificationsContainer from "./components/home_screen/QualificationsContainer";
 import TestimonialsContainer from "./components/home_screen/TestimonialsContainer";
 import WorkProcessContainer from "./components/home_screen/WorkProcessContainer";
-import ComingSoonContainer from "./components/home_screen/ComingSoonContainer";
 import SectionContainer from "./components/ui/containers/SectionContainer";
 import ProgramsContainer from "./components/home_screen/ProgramsContainer";
 import AboutMeContainer from "./components/home_screen/AboutMeContainer";
@@ -22,7 +21,7 @@ export default function Home() {
 				{/* Spacer to push content below fixed nav */}
 				<div className="h-[110px]" />
 
-				<div className="w-full flex flex-col justify-center items-center overflow-auto gap-y-[50px]">
+				<div className="w-full flex flex-col justify-center items-center overflow-auto gap-y-[40px]">
 					<SectionContainer sectionId="home">
 						<HomeContainer />
 					</SectionContainer>
@@ -44,9 +43,11 @@ export default function Home() {
 					<SectionContainer sectionId="questions">
 						<QuestionsAndAnswersContainer />
 					</SectionContainer>
-					<SectionContainer sectionId="coming-soon">
-						<ComingSoonContainer />
-					</SectionContainer>
+					{/*
+            <SectionContainer sectionId="coming-soon">
+              <ComingSoonContainer />
+            </SectionContainer>
+          */}
 				</div>
 			</div>
 		</div>

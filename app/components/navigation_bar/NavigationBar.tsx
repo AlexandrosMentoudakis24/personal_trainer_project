@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 
-import { NavigationBarLinks } from "@/app/data/NavigationBarLinks";
+import Image from "next/image";
+
 import PrimaryButton from "../ui/buttons/PrimaryButton";
 import NavigationBarItem from "./NavigationBarItem";
-import Image from "next/image";
+
+import { navigationBarLinks } from "@/app/data/NavigationBarLinks";
 
 const NavigationBar = () => {
 	const [activeLinkId, setActiveLinkId] = useState<string>("home");
@@ -27,7 +29,7 @@ const NavigationBar = () => {
         gap-x-[20px]
         "
 			>
-				{NavigationBarLinks.map((link) => {
+				{navigationBarLinks.map((link) => {
 					return (
 						<NavigationBarItem
 							key={link.id}

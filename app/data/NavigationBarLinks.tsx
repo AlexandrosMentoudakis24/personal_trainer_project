@@ -1,6 +1,6 @@
 import { NavigationbarItemType } from "../types/NavigationBarItemType";
 
-export const NavigationBarLinks: NavigationbarItemType[] = [
+export const navigationBarLinks: NavigationbarItemType[] = [
 	{
 		id: "home",
 		title: "Αρχική",
@@ -26,9 +26,9 @@ export const NavigationBarLinks: NavigationbarItemType[] = [
 		title: "Συχνές Ερωτήσεις",
 		target: "#questions",
 	},
-	{
-		id: "coming-soon",
-		title: "Νέες υπηρεσίες",
-		target: "#coming-soon",
-	},
+	//{
+	//	id: "coming-soon",
+	//	title: "Νέες υπηρεσίες",
+	//	target: "#coming-soon",
+	//},
 ];

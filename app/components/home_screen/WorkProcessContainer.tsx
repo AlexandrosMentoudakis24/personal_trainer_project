@@ -19,8 +19,8 @@ const WorkProcessContainer = () => {
 				<VerticalTimeline timelineSteps={timelineSteps} />
 			</div>
 			<div className="w-full grid place-items-center mt-[30px]">
-				<span className="w-[200px] h-[70px]">
-					<PrimaryButton onButtonClickHandler={() => {}} text="Κάνε Αίτηση" />
+				<span className="w-[190px] h-[65px]">
+					<PrimaryButton onButtonClickHandler={() => {}} text="Ξεκίνα Τώρα" />
 				</span>
 			</div>
 		</div>

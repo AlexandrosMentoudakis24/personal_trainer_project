@@ -24,9 +24,11 @@ const ExpandableCardWithSubTitleText = ({
       text-white
       bg-transparent 
       px-4 py-3
-      gap-y-[20px]
+      gap-y-[10px]
       "
 		>
+			{/* Question Section */}
+
 			<div
 				onClick={() => setExpanded((prev) => !prev)}
 				className="
@@ -38,7 +40,7 @@ const ExpandableCardWithSubTitleText = ({
         pb-[15px]
         "
 			>
-				<h2 className="text-3xl font-bold tracking-wide">{title}</h2>
+				<h2 className="text-2xl font-bold tracking-wide">{title}</h2>
 				<span
 					className={`transition-transform duration-500 ${
 						expanded ? "rotate-180" : "rotate-0"
@@ -47,12 +49,14 @@ const ExpandableCardWithSubTitleText = ({
 					<IoArrowDown size={28} />
 				</span>
 			</div>
+
+			{/* Answer Section */}
 			<div
 				className={`transition-all duration-500 ease-in-out overflow-hidden ${
 					expanded ? "max-h-40 opacity-100" : "max-h-0 opacity-0 mt-0"
 				}`}
 			>
-				<p className="text-2xl text-slate-300">{innerContentText}</p>
+				<p className="text-2xl text-slate-400">{innerContentText}</p>
 			</div>
 		</div>
 	);

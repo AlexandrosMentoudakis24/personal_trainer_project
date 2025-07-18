@@ -1,6 +1,7 @@
 import ProgramCard from "../ui/cards/ProgramCard";
 
 import { availablePrograms } from "@/app/data/home_screen/AvailablePrograms";
+import ExtraInformationText from "../ui/texts/ExtraInformationText";
 
 const ProgramsContainer = () => {
 	return (
@@ -9,9 +10,7 @@ const ProgramsContainer = () => {
 				<span className="text-5xl text-white font-bold">
 					Διαθέσιμα Προγράμματα
 				</span>
-				<span className="text-2xl text-secondaryFgColor font-semibold">
-					Διάλεξε το πρόγραμμά σου
-				</span>
+				<ExtraInformationText text="Διάλεξε το πρόγραμμά σου" />
 			</div>
 			<div className="w-full flex flex-row justify-center items-center gap-x-[50px]">
 				{availablePrograms.map((p) => {

@@ -5,7 +5,7 @@ const AboutMeContainer = () => {
 	return (
 		<>
 			<div className="flex flex-col justify-center items-center text-center gap-y-[25px]">
-				<span className="font-bold text-5xl text-white">ΠΟΙΟΣ ΕΙΜΑΙ?</span>
+				<span className="font-bold text-4xl text-white">ΠΟΙΟΣ ΕΙΜΑΙ?</span>
 				<ExtraInformationText
 					text="
 					Είμαι ένας πιστοποιημένος Personal Trainer με υπόβαθρο στην επιστήμη

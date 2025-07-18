@@ -17,7 +17,7 @@ const NavigationBarItem = ({
 
 	return (
 		<Link
-			href={navBarItem.target}
+			href={`./${navBarItem.target}`}
 			onClick={onLinkClickHandler}
 			className={`
         h-[50px] 

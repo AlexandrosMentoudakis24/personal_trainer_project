@@ -2,19 +2,12 @@
 
 import ExtraInformationText from "../ui/texts/ExtraInformationText";
 import PrimaryButton from "../ui/buttons/PrimaryButton";
+import TitleText from "../texts/TitleText";
 
 const HomeContainer = () => {
 	return (
 		<>
-			<span
-				className="
-          text-xl sm:text-2xl md:text-4xl
-          text-center md:text-center
-          font-bold tracking-wide
-          "
-			>
-				ΜΕΤΑΜΟΡΦΩΝΟΝΤΑΣ <br /> ΤΙΣ ΠΡΟΚΛΗΣΕΙΣ ΣΕ ΘΡΙΑΜΒΟΥΣ!
-			</span>
+			<TitleText text="ΜΕΤΑΜΟΡΦΩΝΟΝΤΑΣ ΤΙΣ ΠΡΟΚΛΗΣΕΙΣ ΣΕ ΘΡΙΑΜΒΟΥΣ!" />
 			<ExtraInformationText
 				text="
 				Σκοπός μου είναι να σε βοηθήσω να πετύχεις τους στόχους σου. Μαζί θα

@@ -1,7 +1,11 @@
+import HeaderContainer from "../components/form_screen/HeaderContainer";
+import FormContent from "../components/form_screen/FormContent";
+
 const FormPage = () => {
 	return (
-		<div>
-			<div>form Page</div>
+		<div className="w-[100%] md:w-[60%] xl-[50%] flex flex-col justify-start items-center pt-[50px] gap-y-[55px]">
+			<HeaderContainer />
+			<FormContent />
 		</div>
 	);
 };

@@ -1,36 +1,40 @@
-export type Subscription = "Μηνιαία" | "Ετήσια";
+export enum AvailableFormInputType {
+	PersonalTraining = "personal-training",
+	PersonalTrainingAndDietPlan = "personal-training-and-diet-plan",
+	DietPlan = "diet-plan",
+}
 
 export interface Program {
 	id: string;
+	type: AvailableFormInputType;
 	title: string;
 	description: string;
-	subscription: Subscription;
 	isPrimaryCardProgram: boolean;
 }
 
 export const availablePrograms: Program[] = [
 	{
-		id: "personal-training",
-		title: "Personal Training",
+		id: "diet-plan",
+		type: AvailableFormInputType.PersonalTraining,
+		title: "Πλάνο Διατροφής",
 		description:
-			"Αυτό το πρόγραμμα περιλαμβάνει εξατομικευμένες προπονήσεις, καθοδήγηση και παρακολούθηση προόδου. Πρόγραμμα με μηνιαία συνδρομή.",
-		subscription: "Μηνιαία",
+			"Αυτό το πρόγραμμα περιλαμβάνει την δημιουργία ενός εξατομικευμένου διατροφικού πλάνου, προσαρμοσμένο πάνω στους στόχους και τις ανάγκες σου.",
 		isPrimaryCardProgram: false,
 	},
 	{
-		id: "personal-training-diet-plan-monthly",
-		title: "Personal Training & Διατροφικό Πλάνο",
+		id: "personal-training-and-diet-plan",
+		type: AvailableFormInputType.PersonalTrainingAndDietPlan,
+		title: "Personal Training & Πλάνο Διατροφής",
 		description:
-			"Αυτό το πρόγραμμα περιλαμβάνει όλα όσα προσφέρει το Πρόγραμμα Προσωπικής Προπόνησης, καθώς και εξατομικευμένο διατροφικό πλάνο. Πρόγραμμα με ετήσια συνδρομή.",
-		subscription: "Ετήσια",
+			"Αυτό το πρόγραμμα περιλαμβάνει το ολοκληρωμένο πακέτο μας, εξατομικευμένα προγράμματα άσκησης και διατροφής + Καθοδήγηση και εβδομαδιαία παρακολούθηση προόδου.",
 		isPrimaryCardProgram: true,
 	},
 	{
-		id: "personal-training-diet-plan-yearly",
-		title: "Personal Training & Διατροφικό Πλάνο",
+		id: "personal-training",
+		type: AvailableFormInputType.PersonalTraining,
+		title: "Personal Training",
 		description:
-			"Αυτό το πρόγραμμα περιλαμβάνει όλα όσα προσφέρει το Πρόγραμμα Προσωπικής Προπόνησης, καθώς και εξατομικευμένο διατροφικό πλάνο. Πρόγραμμα με μηνιαία συνδρομή.",
-		subscription: "Μηνιαία",
+			"Αυτό το πρόγραμμα περιλαμβάνει την δημιουργία ενός εξατομικευμένου προγράμματος ασκήσεων, καθοδήγηση και παρακολούθηση προόδου.",
 		isPrimaryCardProgram: false,
 	},
 ];

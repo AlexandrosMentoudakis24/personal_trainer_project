@@ -10,7 +10,7 @@ import HomeContainer from "./components/home_screen/HomeContainer";
 export default function Home() {
 	return (
 		<div className="w-full flex flex-col justify-center items-center overflow-auto gap-y-[40px]">
-			<SectionContainer sectionId="home">
+			<SectionContainer sectionId="">
 				<HomeContainer />
 			</SectionContainer>
 			<SectionContainer sectionId="about">

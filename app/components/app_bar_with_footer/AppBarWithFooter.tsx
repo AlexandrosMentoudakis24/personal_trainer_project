@@ -15,7 +15,7 @@ const AppBarWithFooter = ({
 				</div>
 
 				{/* Spacer to push content below fixed nav */}
-				<div className="h-[110px]" />
+				<div id="home" className="h-[110px]" />
 				{children}
 			</div>
 		</div>

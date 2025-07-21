@@ -222,12 +222,6 @@ export const formInputs: FormUserInputField[] = [
 				placeholder:
 					"Training And Nutrition Plans - Εξατομικευμένα προγράμματα άσκησης και διατροφής",
 			},
-			{
-				id: "4",
-				value: "training-diet-plans-and-monitoring",
-				placeholder:
-					"Εξατομικευμένα προγράμματα άσκησης και διατροφής. Εβδομαδιαία επικοινωνία και παρακολούθηση / καταγραφή προόδο",
-			},
 		],
 	},
 	{

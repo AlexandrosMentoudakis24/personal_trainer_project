@@ -9,10 +9,11 @@ const SectionContainer = ({
 		<section
 			id={sectionId}
 			className="
-      w-full 
-      md:w-[70%] xl:w-[75%]
+      w-[100%] md:w-[70%] lg:w-[60%] 
       grid place-items-center
-      text-white
+      flex-wrap
+      text-white text-wrap
+      px-[20px]
       py-[25px] md:py-[50px] lg:py-[100px]
       gap-y-[30px]
     "

@@ -17,7 +17,8 @@ const PrimaryButton = ({
       font-extrabold 
       text-center text-[22px] text-white
       bg-primaryButtonBgColor
-      hover:text-primaryButtonBgColor hover:bg-white
+      hover:opacity-80
+      active:opacity-60
       px-[16px] py-[10px]
       "
 			onClick={onButtonClickHandler}

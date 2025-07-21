@@ -1,9 +1,12 @@
-import { FormUserInputField } from "@/app/types/UserInput";
+import {
+	AvailableFormInputType,
+	FormUserInputField,
+} from "@/app/types/UserInput";
 
 export const formInputs: FormUserInputField[] = [
 	{
 		id: "first-name",
-		type: "text",
+		type: AvailableFormInputType.Text,
 		label: "Όνομα",
 		name: "first-name",
 		placeholder: "Όνομα",
@@ -11,7 +14,7 @@ export const formInputs: FormUserInputField[] = [
 	},
 	{
 		id: "last-name",
-		type: "text",
+		type: AvailableFormInputType.Text,
 		label: "Επίθετο",
 		name: "last-name",
 		placeholder: "Επίθετο",
@@ -19,7 +22,7 @@ export const formInputs: FormUserInputField[] = [
 	},
 	{
 		id: "email",
-		type: "text",
+		type: AvailableFormInputType.Text,
 		label: "Email",
 		name: "email",
 		placeholder: "Email",
@@ -27,7 +30,7 @@ export const formInputs: FormUserInputField[] = [
 	},
 	{
 		id: "telephone",
-		type: "number",
+		type: AvailableFormInputType.Number,
 		label: "Τηλέφωνο",
 		name: "telephone",
 		placeholder: "Τηλέφωνο",
@@ -37,7 +40,7 @@ export const formInputs: FormUserInputField[] = [
 		id: "gender",
 		label: "Φύλο",
 		name: "gender",
-		type: "select",
+		type: AvailableFormInputType.Select,
 		isRequired: true,
 		availableOptions: [
 			{ id: "male", value: "male", placeholder: "Άνδρας" },
@@ -46,23 +49,23 @@ export const formInputs: FormUserInputField[] = [
 	},
 	{
 		id: "height",
-		type: "number",
+		type: AvailableFormInputType.Number,
 		label: "Ύψος",
 		name: "height",
-		placeholder: "Ύψος σε εκατ. (π.χ. 180)",
+		placeholder: "Ύψος σε εκατοστά (π.χ. 180)",
 		isRequired: true,
 	},
 	{
 		id: "weight",
-		type: "number",
+		type: AvailableFormInputType.Number,
 		label: "Βάρος",
 		name: "weight",
-		placeholder: "Βάρος σε εκατ. (π.χ. 80)",
+		placeholder: "Βάρος σε κιλά (π.χ. 80)",
 		isRequired: true,
 	},
 	{
 		id: "age",
-		type: "number",
+		type: AvailableFormInputType.Number,
 		label: "Ηλικία",
 		name: "age",
 		placeholder: "Ηλικία",
@@ -70,7 +73,7 @@ export const formInputs: FormUserInputField[] = [
 	},
 	{
 		id: "weekly-training-time",
-		type: "number",
+		type: AvailableFormInputType.Number,
 		label: "Πόσες ημέρες μπορείς να προπονηθείς ανά εβδομάδα?",
 		name: "weekly-training-time",
 		placeholder:
@@ -79,7 +82,7 @@ export const formInputs: FormUserInputField[] = [
 	},
 	{
 		id: "daily-training-hours",
-		type: "number",
+		type: AvailableFormInputType.Number,
 		label: "Πόσες ώρες μπορείς να προπονηθείς ανά ημέρα",
 		name: "daily-training-hours",
 		placeholder: "Πόσες ώρες έχεις ελεύθερες ανά ημέρα (π.χ. 3)",
@@ -87,7 +90,7 @@ export const formInputs: FormUserInputField[] = [
 	},
 	{
 		id: "training-equipment",
-		type: "select",
+		type: AvailableFormInputType.Select,
 		label: "Σε τι είδους εξοπλισμό έχεις πρόσβαση για τις προπονήσεις σου?",
 		name: "training-equipment",
 		isRequired: true,
@@ -108,5 +111,132 @@ export const formInputs: FormUserInputField[] = [
 				placeholder: "Σπίτι αλλά χωρίς εξοπλισμό",
 			},
 		],
+	},
+	{
+		id: "sport-engagement",
+		type: AvailableFormInputType.Select,
+		label: "Έχεις ξανά ασχοληθεί με τον αθλητισμό?",
+		name: "sport-engagement",
+		isRequired: true,
+		availableOptions: [
+			{
+				id: "1",
+				value: "none",
+				placeholder: "Καθόλου",
+			},
+			{
+				id: "2",
+				value: "1-2",
+				placeholder: "Λίγο (1 με 2 χρόνια)",
+			},
+			{
+				id: "3",
+				value: "3-4",
+				placeholder: "Αρκετά (3 με 4 χρόνια)",
+			},
+			{
+				id: "4",
+				value: "4+",
+				placeholder: "Πολύ (πάνω από 4 χρόνια)",
+			},
+		],
+	},
+	{
+		id: "injuries",
+		type: AvailableFormInputType.Select,
+		label: "Είχες κάποιο πρόσφατο τραυματισμό ή πρόβλημα υγείας?",
+		name: "injuries",
+		isRequired: true,
+		availableOptions: [
+			{
+				id: "1",
+				value: "none",
+				placeholder: "Τίποτα από τα δύο",
+			},
+			{
+				id: "2",
+				value: "injury",
+				placeholder: "Είχα τραυματισμό",
+			},
+			{
+				id: "3",
+				value: "health-problem",
+				placeholder: "Είχα πρόβλημα υγείας",
+			},
+			{
+				id: "4",
+				value: "injury-and-health-problem",
+				placeholder: "Είχα και από τα δύο",
+			},
+		],
+	},
+	{
+		id: "goals",
+		type: AvailableFormInputType.Select,
+		label: "Ποιος είναι ο στόχος σου?",
+		name: "goals",
+		isRequired: true,
+		availableOptions: [
+			{
+				id: "1",
+				value: "muscle-power",
+				placeholder: "Αύξηση μυϊκής μάζας",
+			},
+			{
+				id: "2",
+				value: "lose-weights",
+				placeholder: "Μείωση λίπους",
+			},
+			{
+				id: "3",
+				value: "better-physical-state",
+				placeholder: "Βελτίωση φυσικής κατάστασης",
+			},
+			{
+				id: "4",
+				value: "stress-relief",
+				placeholder: "Εκτόνωση / Απώλεια άγχους",
+			},
+		],
+	},
+	{
+		id: "program",
+		type: AvailableFormInputType.Select,
+		label: "Ενδιαφέρομαι για:",
+		name: "program",
+		isRequired: true,
+		availableOptions: [
+			{
+				id: "1",
+				value: "personalized-program",
+				placeholder: "Training Program - Εξατομικευμένο πρόγραμμα άσκησης",
+			},
+			{
+				id: "2",
+				value: "personalized-diet",
+				placeholder: "Nutrition Diet Plan - Εξατομικευμένο πρόγραμμα διατροφής",
+			},
+			{
+				id: "3",
+				value: "personalized-program-and-diet",
+				placeholder:
+					"Training And Nutrition Plans - Εξατομικευμένα προγράμματα άσκησης και διατροφής",
+			},
+			{
+				id: "4",
+				value: "training-diet-plans-and-monitoring",
+				placeholder:
+					"Εξατομικευμένα προγράμματα άσκησης και διατροφής. Εβδομαδιαία επικοινωνία και παρακολούθηση / καταγραφή προόδο",
+			},
+		],
+	},
+	{
+		id: "budget",
+		type: AvailableFormInputType.Number,
+		label:
+			"Ποιο είναι το μέγιστο χρηματικό ποσό (budget) που μπορείς να διαθέσεις ανά μήνα?",
+		name: "budget",
+		placeholder: "Διαθέσιμο budget ανά μήνα (π.χ. 50)",
+		isRequired: true,
 	},
 ];

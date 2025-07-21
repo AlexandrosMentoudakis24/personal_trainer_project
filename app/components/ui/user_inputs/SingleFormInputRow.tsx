@@ -1,7 +1,12 @@
 import UserFormSelectInput from "./UserFormSelectInput";
 import UserTextInput from "./UserTextInput";
 
-import { FormUserInputField } from "@/app/types/UserInput";
+import {
+	AvailableFormInputType,
+	FormUserInputField,
+	UserInput,
+	UserSelectInput,
+} from "@/app/types/UserInput";
 
 const configureGridClass = (totalSubGridsSum: number) => {
 	const gridClassNameInfos = "grid grid-cols-1 ";
@@ -15,6 +20,15 @@ const configureGridClass = (totalSubGridsSum: number) => {
 			return `${gridClassNameInfos} md:grid-cols-3`;
 		default:
 			return `${gridClassNameInfos} md:grid-cols-1`;
+	}
+};
+
+const constructFormFieldElement = (userInput: FormUserInputField) => {
+	switch (userInput.type) {
+		case AvailableFormInputType.Select:
+			return <UserFormSelectInput userInput={userInput as UserSelectInput} />;
+		default:
+			return <UserTextInput userInput={userInput as UserInput} />;
 	}
 };
 
@@ -32,11 +46,7 @@ const SingleFormInputRow = ({
 			{userInputs.map((userInput) => {
 				return (
 					<div key={userInput.id} className="col-span-1">
-						{userInput.type === "select" ? (
-							<UserFormSelectInput userInput={userInput} />
-						) : (
-							<UserTextInput userInput={userInput} />
-						)}
+						{constructFormFieldElement(userInput)}
 					</div>
 				);
 			})}

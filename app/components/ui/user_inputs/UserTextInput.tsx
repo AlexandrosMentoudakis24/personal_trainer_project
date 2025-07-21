@@ -1,6 +1,6 @@
-import { FormUserInputField } from "@/app/types/UserInput";
+import { UserInput } from "@/app/types/UserInput";
 
-const UserTextInput = ({ userInput }: { userInput: FormUserInputField }) => {
+const UserTextInput = ({ userInput }: { userInput: UserInput }) => {
 	return (
 		<div className="w-full flex flex-col justify-start items-start gap-y-[10px]">
 			<label className="text-xl text-white" htmlFor={userInput.name}>
@@ -8,12 +8,12 @@ const UserTextInput = ({ userInput }: { userInput: FormUserInputField }) => {
 			</label>
 			<input
 				className="
-        w-full h-[50px] 
+        w-full
         text-lg text-white
         rounded-md border-2 border-white 
         focus:outline-none focus:border-primaryRedColor
         placeholder:text-lg placeholder:text-secondaryFgColor
-        px-[10px]
+        px-[10px] py-[10px]
         "
 				type={userInput.type}
 				name={userInput.name}

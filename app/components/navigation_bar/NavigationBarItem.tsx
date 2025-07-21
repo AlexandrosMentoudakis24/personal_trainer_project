@@ -12,12 +12,12 @@ const NavigationBarItem = ({
 	onLinkClickHandler: () => void;
 }) => {
 	const linkStyle = isActive
-		? "text-white bg-[var(--color-primaryButtonBgColor)]"
+		? "text-white bg-primaryButtonBgColor"
 		: "text-gray-400 bg-transparent";
 
 	return (
 		<Link
-			href={`./${navBarItem.target}`}
+			href={`/${navBarItem.target}`}
 			onClick={onLinkClickHandler}
 			className={`
         h-[50px] 

@@ -10,14 +10,14 @@ const UserFormSelectInput = ({ userInput }: { userInput: UserSelectInput }) => {
 			<div className="relative w-full">
 				<select
 					className="
-          w-full h-[50px]
+          w-full 
           appearance-none
           text-lg text-white
           bg-transparent
           rounded-md border-2 border-white
           focus:outline-none focus:border-primaryRedColor
           placeholder:text-lg placeholder:text-secondaryFgColor
-          px-[10px] pr-[40px]  // space for arrow
+          px-[10px] py-[10px] pr-[40px]  // space for arrow
         "
 					name={userInput.name}
 					required={userInput.isRequired}

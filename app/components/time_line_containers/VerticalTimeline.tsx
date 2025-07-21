@@ -12,7 +12,7 @@ const VerticalTimeline = ({
 	const secondSlice = timelineSteps.slice(halfArrayLength);
 
 	return (
-		<div className="w-full grid grid-cols-2 gap-x-[35px] gap-y-[35px]">
+		<div className="w-full grid grid-cols-2 place-items-center gap-x-[35px] gap-y-[35px]">
 			<div className="col-span-1 w-full flex flex-col gap-y-[35px]">
 				{firstSlice.map((step) => {
 					return <VerticalTimelineSingleStep key={step.id} step={step} />;

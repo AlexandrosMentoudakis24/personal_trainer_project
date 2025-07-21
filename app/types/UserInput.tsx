@@ -1,13 +1,16 @@
-export type AvailableFormInputTypes = "text" | "number" | "select";
-export type AvailableInputTypes = Extract<
-	AvailableFormInputTypes,
-	"text" | "number"
->;
-export type AvailableSelectType = Extract<AvailableFormInputTypes, "select">;
+export enum AvailableFormInputType {
+	Text = "text",
+	Number = "number",
+	Select = "select",
+}
+
+export type FormUserInputTypes =
+	| AvailableFormInputType.Text
+	| AvailableFormInputType.Number;
 
 export interface UserInput {
 	id: string;
-	type: AvailableInputTypes;
+	type: FormUserInputTypes;
 	name: string;
 	label: string;
 	placeholder: string;
@@ -16,7 +19,7 @@ export interface UserInput {
 
 export interface UserSelectInput {
 	id: string;
-	type: AvailableSelectType;
+	type: AvailableFormInputType.Select;
 	name: string;
 	label: string;
 	isRequired: boolean;

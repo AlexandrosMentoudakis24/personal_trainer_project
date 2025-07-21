@@ -15,7 +15,7 @@ const WorkProcessContainer = () => {
 				</span>
 				<ExtraInformationText text="Βήμα-Βήμα όλη η διαδικασία που ακολουθούμε από την γνωριμία, την πρώτη προπόνηση αλλά και μέχρι την τελευταία ημέρα που θα δουλέψουμε μαζί" />
 			</div>
-			<div className="w-full mt-[20px]">
+			<div className="w-fullmt-[20px]">
 				<VerticalTimeline timelineSteps={timelineSteps} />
 			</div>
 			<div className="w-full grid place-items-center mt-[30px]">

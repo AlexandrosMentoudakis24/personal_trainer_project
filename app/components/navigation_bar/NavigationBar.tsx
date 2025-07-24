@@ -1,18 +1,14 @@
 "use client";
 
-import { useState } from "react";
-
 import Image from "next/image";
+import Link from "next/link";
 
 import PrimaryButton from "../ui/buttons/PrimaryButton";
 import NavigationBarItem from "./NavigationBarItem";
 
 import { navigationBarLinks } from "@/app/data/NavigationBarLinks";
-import Link from "next/link";
 
 const NavigationBar = () => {
-	const [activeLinkId, setActiveLinkId] = useState<string>("home");
-
 	return (
 		<div className="w-full h-full flex flex-row justify-between items-center text-center bg-navigationBarBgColor px-[25px]">
 			<Link href={"/"}>
@@ -33,16 +29,7 @@ const NavigationBar = () => {
         "
 			>
 				{navigationBarLinks.map((link) => {
-					return (
-						<NavigationBarItem
-							key={link.id}
-							navBarItem={link}
-							isActive={link.id === activeLinkId}
-							onLinkClickHandler={() => {
-								setActiveLinkId(link.id);
-							}}
-						/>
-					);
+					return <NavigationBarItem key={link.id} navBarItem={link} />;
 				})}
 			</div>
 			<div>

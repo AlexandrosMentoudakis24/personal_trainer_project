@@ -4,31 +4,23 @@ import { NavigationbarItemType } from "@/app/types/NavigationBarItemType";
 
 const NavigationBarItem = ({
 	navBarItem,
-	isActive,
-	onLinkClickHandler,
 }: {
 	navBarItem: NavigationbarItemType;
-	isActive: boolean;
-	onLinkClickHandler: () => void;
 }) => {
-	const linkStyle = isActive
-		? "text-white bg-primaryButtonBgColor"
-		: "text-gray-400 bg-transparent";
-
 	return (
 		<Link
 			href={`/${navBarItem.target}`}
-			onClick={onLinkClickHandler}
-			className={`
-        h-[50px] 
-        flex flex-row 
-        justify-center items-center 
-        text-center text-md 
-        font-bold 
-        rounded-md 
-        ${linkStyle}
+			className="
+        relative inline-block 
+        h-[40px] 
+        text-xl font-bold tracking-wide
+        after:content-[''] after:absolute after:left-0 
+        after:-bottom-0 after:w-0 after:h-[3px]
+        after:bg-primaryRedColor
+        after:rounded-full
+        after:transition-all after:duration-500 hover:after:w-full
         px-[16px]
-      `}
+      "
 		>
 			{navBarItem.title}
 		</Link>

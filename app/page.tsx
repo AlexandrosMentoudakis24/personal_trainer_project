@@ -32,10 +32,10 @@ export default function Home() {
 				<QuestionsAndAnswersContainer />
 			</SectionContainer>
 			{/*
-            <SectionContainer sectionId="coming-soon">
-              <ComingSoonContainer />
-            </SectionContainer>
-          */}
+        <SectionContainer sectionId="coming-soon">
+          <ComingSoonContainer />
+        </SectionContainer>
+      */}
 		</div>
 	);
 }
